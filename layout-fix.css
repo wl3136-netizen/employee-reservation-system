@@ -12,7 +12,7 @@ body {
 }
 
 .booking-grid {
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .login-layout > *,
@@ -50,6 +50,84 @@ body {
 
 .slot-row .btn {
   flex: 0 0 auto;
+}
+
+.calendar-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.calendar-scroll .weekdays,
+.calendar-scroll .calendar-grid {
+  min-width: 840px;
+}
+
+.calendar-grid {
+  align-items: stretch;
+}
+
+.calendar-grid .day {
+  min-height: 150px;
+  padding: 10px;
+  border-color: var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  text-align: left;
+}
+
+.calendar-grid .day:not(.in-month) {
+  background: #f7f9fb;
+}
+
+.day-number {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.day-slots {
+  display: grid;
+  gap: 5px;
+}
+
+.calendar-slot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+  padding: 6px 7px;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.calendar-slot.available {
+  background: var(--sky);
+  color: var(--blue);
+}
+
+.calendar-slot.available:hover {
+  background: #d8ebff;
+}
+
+.calendar-slot.booked {
+  background: #f1f2f4;
+  color: #9aa2ab;
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.calendar-slot small {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.dot.booked {
+  background: #b8bec5;
 }
 
 .table-wrap {

@@ -49,13 +49,11 @@
         <div class="booking-grid">
           <article class="card calendar-card">
             <div class="section-head"><div><h2>예약 날짜 선택</h2><p>표시된 날짜만 예약할 수 있습니다.</p></div><div class="month-nav"><button id="prevMonth" class="icon-btn" aria-label="이전 달">‹</button><strong id="monthTitle"></strong><button id="nextMonth" class="icon-btn" aria-label="다음 달">›</button></div></div>
-            <div class="weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
-            <div id="calendar" class="calendar-grid"></div>
-            <div class="legend"><span><i class="dot available"></i>예약 가능</span><span><i class="dot selected"></i>선택</span></div>
-          </article>
-          <article class="card slot-card">
-            <div class="section-head"><div><h2>예약 시간 선택</h2><p id="selectedDateLabel">날짜를 먼저 선택해 주세요.</p></div></div>
-            <div id="slotList" class="slot-list empty-state">예약 가능한 날짜를 선택하면 시간이 표시됩니다.</div>
+            <div class="calendar-scroll">
+              <div class="weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+              <div id="calendar" class="calendar-grid"></div>
+            </div>
+            <div class="legend"><span><i class="dot available"></i>예약 가능</span><span><i class="dot booked"></i>예약 마감</span></div>
           </article>
         </div>
       </section>
