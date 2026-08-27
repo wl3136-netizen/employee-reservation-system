@@ -156,6 +156,46 @@ body {
 }
 
 @media (max-width: 800px) {
+  .calendar-scroll {
+    overflow-x: visible;
+  }
+
+  .calendar-scroll .weekdays,
+  .calendar-scroll .calendar-grid {
+    min-width: 0;
+  }
+
+  .calendar-scroll .weekdays,
+  .calendar-scroll .calendar-grid {
+    gap: 3px;
+  }
+
+  .calendar-grid .day {
+    min-height: 110px;
+    padding: 5px 3px;
+  }
+
+  .day-number {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .day-slots {
+    gap: 3px;
+  }
+
+  .calendar-slot {
+    justify-content: center;
+    padding: 5px 1px;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .calendar-slot .slot-end,
+  .calendar-slot small {
+    display: none;
+  }
+
   .login-layout {
     grid-template-columns: minmax(0, 1fr);
   }
