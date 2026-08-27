@@ -34,6 +34,24 @@ body {
   overflow-wrap: anywhere;
 }
 
+.slot-row {
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.slot-row > div {
+  flex: 1 1 110px;
+}
+
+.slot-row strong {
+  display: block;
+  white-space: nowrap;
+}
+
+.slot-row .btn {
+  flex: 0 0 auto;
+}
+
 .table-wrap {
   width: 100%;
   max-width: 100%;
