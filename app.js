@@ -1,7 +1,7 @@
 'use strict';
 
 // Apps Script Web App 배포 후 /exec URL로 교체하세요.
-const API_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+const API_URL = 'https://script.google.com/macros/s/AKfycbz1fHALeY9NBzVtyzBclsj6BYhV6ks5qbCr6cN_ZUYNGnUrFgkzjb1p8RL16PLU5ifu/exec';
 
 const state={token:sessionStorage.getItem('reservationToken')||'',user:null,dates:[],month:new Date(new Date().getFullYear(),new Date().getMonth(),1),selectedDate:'',masterSection:'users',departments:[]};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
