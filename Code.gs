@@ -13,7 +13,7 @@ function ss_(){const id=PropertiesService.getScriptProperties().getProperty('SPR
 function sheet_(name){const sh=ss_().getSheetByName(name);if(!sh)throw new Error(`${name} 시트가 없습니다.`);return sh}
 function rows_(name){const sh=sheet_(name),last=sh.getLastRow();if(last<2)return[];const headers=HEADERS[name],values=sh.getRange(2,1,last-1,headers.length).getDisplayValues();return values.filter(r=>r.some(v=>v!=='' )).map((r,i)=>{const o={_row:i+2};headers.forEach((h,j)=>o[h]=r[j]);return o})}
 function bool_(v){return v===true||String(v).toUpperCase()==='TRUE'||String(v)==='1'}
-function validEmployeeId_(v){v=String(v||'').trim();if(!/^[A-Za-z0-9_-]{1,30}$/.test(v))throw new AppError('사번 형식이 올바르지 않습니다.');return v}
+function validEmployeeId_(v){v=String(v||'').trim();if(!/^\d{8}$/.test(v))throw new AppError('사번은 8자리 숫자로 입력해 주세요.');return v}
 function validDate_(v){v=String(v||'');if(!/^\d{4}-\d{2}-\d{2}$/.test(v)||isNaN(new Date(`${v}T00:00:00+09:00`).getTime()))throw new AppError('날짜 형식이 올바르지 않습니다.');return v}
 function validTime_(v){v=String(v||'');if(!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(v))throw new AppError('시간 형식이 올바르지 않습니다.');return v}
 function normalizeDate_(v){if(v instanceof Date)return Utilities.formatDate(v,CONFIG.TIME_ZONE,'yyyy-MM-dd');const s=String(v||'').trim();const m=s.match(/^(\d{4})[-\/.](\d{1,2})[-\/.](\d{1,2})$/);return m?`${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}`:s}

@@ -21,7 +21,7 @@ GitHub Pages 정적 프론트엔드와 Google Apps Script Web App, Google Spread
 | Reservations | reservationId, date, startTime, endTime, employeeId, name, departmentId, status, createdAt |
 | Masters | employeeId, name, enabled |
 
-날짜는 `yyyy-MM-dd`, 시간은 `HH:mm`, 사용 여부는 `TRUE/FALSE` 형식으로 입력합니다. 사번과 각 ID는 숫자로만 구성되더라도 셀 서식을 일반 텍스트로 두는 것을 권장합니다.
+날짜는 `yyyy-MM-dd`, 시간은 `HH:mm`, 사용 여부는 `TRUE/FALSE` 형식으로 입력합니다. 사번은 8자리 숫자로 입력하며, 앞의 0을 유지할 수 있도록 셀 서식을 일반 텍스트로 두는 것을 권장합니다.
 
 ### 테스트 데이터 사용 시 주의사항
 
