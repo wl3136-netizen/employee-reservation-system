@@ -66,6 +66,18 @@ body {
   align-items: stretch;
 }
 
+.calendar-months {
+  display: grid;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.calendar-month h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 20px;
+}
+
 .calendar-grid .day {
   min-height: 150px;
   padding: 10px;
