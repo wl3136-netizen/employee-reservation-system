@@ -51,3 +51,4 @@ GitHub Pages 프런트엔드, Google Apps Script Web App, Google Spreadsheet를 
 - 예약 생성은 `LockService` 잠금 안에서 사용자 중복과 시간 중복을 다시 검사합니다.
 - 예약 취소 시 행을 삭제하지 않고 상태를 `CANCELLED`로 변경합니다.
 - 달력에는 원본 일정에 포함된 모든 달과 날짜가 연속으로 표시됩니다.
+- 관리자는 전체 예약 화면에서 취소되지 않은 최종 예약만 Excel 호환 CSV로 다운로드할 수 있습니다.
