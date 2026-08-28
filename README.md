@@ -22,8 +22,8 @@ GitHub Pages 프런트엔드, Google Apps Script Web App, Google Spreadsheet를 
 |---|---|
 | Users | userId, company, departmentId, name, enabled |
 | Departments | departmentId, company, departmentName, enabled |
-| AvailableSlots | slotId, date, startTime, endTime, enabled |
-| Reservations | reservationId, date, startTime, endTime, userId, company, name, departmentId, status, createdAt |
+| AvailableSlots | slotId, date, startTime, endTime, enabled, location |
+| Reservations | reservationId, date, startTime, endTime, userId, company, name, departmentId, status, createdAt, location |
 | Masters | company, departmentName, name, enabled |
 
 초기화 함수는 `사용자명단`의 회사명·부서·성명을 사용자 목록으로 변환하고, `예약가능날짜`의 날짜 및 운영시간 조합을 예약 슬롯으로 만듭니다. 지정된 관리자 사용자가 원본 명단에 없으면 관리자 정보도 자동 추가합니다.
@@ -52,4 +52,5 @@ GitHub Pages 프런트엔드, Google Apps Script Web App, Google Spreadsheet를 
 - 예약 취소 시 행을 삭제하지 않고 상태를 `CANCELLED`로 변경합니다.
 - 달력에는 원본 일정에 포함된 모든 달과 날짜가 연속으로 표시됩니다.
 - 주말과 `CONFIG.BLOCKED_DATES`에 지정된 날짜는 항상 예약할 수 없습니다.
+- 예약 일정은 2026년 11월 9일까지이며, 달력 날짜 옆에 해당 사업장 장소가 표시됩니다.
 - 관리자는 전체 예약 화면에서 취소되지 않은 최종 예약만 Excel 호환 CSV로 다운로드할 수 있습니다.
