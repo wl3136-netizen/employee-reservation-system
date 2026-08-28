@@ -102,7 +102,9 @@ body {
   align-items: baseline;
   justify-content: space-between;
   gap: 4px;
-  margin-bottom: 8px;
+  margin: -5px -5px 8px;
+  padding: 7px;
+  border-radius: 6px;
 }
 
 .day-heading .day-number {
@@ -110,12 +112,21 @@ body {
 }
 
 .day-location {
-  color: var(--navy);
+  color: #17212b;
   font-size: 10px;
   font-weight: 800;
   line-height: 1.25;
   text-align: right;
 }
+
+.day-heading.location-tse3 { background: #fff36a; }
+.day-heading.location-tse2 { background: #ffc928; }
+.day-heading.location-megasen { background: #42c8eb; }
+.day-heading.location-megatouch { background: #8bd34b; }
+.day-heading.location-tiger { background: #f3d99b; }
+.day-heading.location-gm { background: #f4ae7c; }
+.day-heading.location-ldt { background: #9dc8e8; }
+.day-heading.location-default { background: #dfe8f2; }
 
 .day-slots {
   display: grid;
@@ -214,7 +225,8 @@ body {
 
   .day-heading {
     display: block;
-    margin-bottom: 5px;
+    margin: -2px -1px 5px;
+    padding: 4px 2px;
   }
 
   .day-heading .day-number {
