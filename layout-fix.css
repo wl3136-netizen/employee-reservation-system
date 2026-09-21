@@ -127,10 +127,29 @@ body {
 .day-heading.location-gm { background: #f4ae7c; }
 .day-heading.location-ldt { background: #9dc8e8; }
 .day-heading.location-default { background: #dfe8f2; }
+.slot-location.location-tse3 { background: #fff36a; }
+.slot-location.location-tse2 { background: #ffc928; }
+.slot-location.location-megasen { background: #42c8eb; }
+.slot-location.location-megatouch { background: #8bd34b; }
+.slot-location.location-tiger { background: #f3d99b; }
+.slot-location.location-gm { background: #f4ae7c; }
+.slot-location.location-ldt { background: #9dc8e8; }
+.slot-location.location-default { background: #dfe8f2; }
 
 .day-slots {
   display: grid;
   gap: 5px;
+}
+
+.slot-location {
+  margin-top: 3px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #17212b;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .calendar-slot {
@@ -243,6 +262,11 @@ body {
 
   .day-slots {
     gap: 3px;
+  }
+
+  .slot-location {
+    padding: 2px;
+    font-size: 7px;
   }
 
   .calendar-slot {
