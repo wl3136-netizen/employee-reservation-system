@@ -141,6 +141,14 @@ body {
   gap: 5px;
 }
 
+.field-hint {
+  display: block;
+  margin-top: 5px;
+  color: #5a6773;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .slot-location {
   margin-top: 3px;
   padding: 3px 6px;
